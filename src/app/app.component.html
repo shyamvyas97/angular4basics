@@ -55,8 +55,23 @@
      <h1>Slice Pipe</h1>
      <b>{{months | slice:2:6}}</b><!-- here 2 and 6 refers to the start and the end index -->
   </div>
-</div>
 
+  <div>
+    <h1>Custom Pipe</h1>
+    <b>Square root of 25 is: {{ 25 | sqrt }}</b>
+  </div>
+
+</div>
+<hr>
+<a routerLink = "newcmp">New component</a>
+<br>
+<br>
+<router-outlet></router-outlet>
+<hr>
+{{ndate}}
+<app-newcmp></app-newcmp> 
+// data to be displayed to user from the new component class.
+<hr>
 <div>
     <span *ngIf="isavailable; then condition1 else condition2">Condition is valid.</span>
     <ng-template #condition1>Condition is valid</ng-template>
